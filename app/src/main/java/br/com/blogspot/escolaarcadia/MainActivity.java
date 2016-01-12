@@ -7,6 +7,8 @@ http://escolaarcadia.blogspot.com.br/
 https://github.com/martinmoraes
 
 Este código está disponível em: https://github.com/martinmoraes/Android-AbrindoActivity
+
+Até a release 2 o enfoque é a abertura de activity. Apartir da release 2 o enfoque é passagem de parâmetros entre as activity.
  */
 
 
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirSegundaActivity(View view){
         Intent intent = new Intent(this, SegundaActivity.class);
+        intent.putExtra("menssagem", getString(R.string.segunda));
+        intent.putExtra("data", "20/set/1900");
         startActivity(intent);
 
     }
